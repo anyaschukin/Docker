@@ -1,19 +1,19 @@
 # Dockerfiles
 
-First you need to setup a virtual machine by running commands [01](https://github.com/dfinnis/Docker/blob/master/00_how_to_docker/01) & [03](https://github.com/dfinnis/Docker/blob/master/00_how_to_docker/03) from [how to docker](https://github.com/dfinnis/Docker/tree/master/00_how_to_docker), also shown below. <br>
+First you need to setup a virtual machine by running commands [01](https://github.com/anyaschukin/Docker/blob/master/00_how_to_docker/01) & [03](https://github.com/anyaschukin/Docker/blob/master/00_how_to_docker/03) from [how to docker](https://github.com/anyaschukin/Docker/tree/master/00_how_to_docker), also shown below. <br>
 ```docker-machine create --driver virtualbox Char``` <br>
 ```eval $(docker-machine env Char)```
 
 Now you are ready to launch Dockerfiles. To delete the VM afterwards run: <br>
 ```docker-machine rm -y Char```
 
-## [0.](https://github.com/dfinnis/Docker/blob/master/01_dockerfiles/ex00/Dockerfile) Alpine image with Vim editor
+## [0.](https://github.com/anyaschukin/Docker/blob/master/01_dockerfiles/ex00/Dockerfile) Alpine image with Vim editor
 
 To build and run: <br>
 ```docker build -t ex00 .``` <br>
 ```docker run -it --rm ex00```
 
-## [1.](https://github.com/dfinnis/Docker/blob/master/01_dockerfiles/ex01/Dockerfile) Debian TeamSpeak server
+## [1.](https://github.com/anyaschukin/Docker/blob/master/01_dockerfiles/ex01/Dockerfile) Debian TeamSpeak server
 
 To build and run: <br>
 ```docker build -t ex01 .``` <br>
@@ -23,7 +23,7 @@ To build and run: <br>
 * Continue without logging in
 * Choose your nickname: Drew
 * Drop down menu: Connections -> Connect
-* Replace "server nickname or address" with the IP address of the container ([how_to_docker/02](https://github.com/dfinnis/Docker/blob/master/00_how_to_docker/01))
+* Replace "server nickname or address" with the IP address of the container ([how_to_docker/02](https://github.com/anyaschukin/Docker/blob/master/00_how_to_docker/01))
 * Copy in ServerAdmin privilege key that appears in terminal
 * Enter Chat Message
 
@@ -32,7 +32,7 @@ Port notes:
 * 10011 = server query
 * 30033 = file transport
 
-## [2.](https://github.com/dfinnis/Docker/blob/master/01_dockerfiles/ex02/Dockerfile) Ruby container for Rails applications
+## [2.](https://github.com/anyaschukin/Docker/blob/master/01_dockerfiles/ex02/Dockerfile) Ruby container for Rails applications
 
 1. Build. <br>
 ```docker build -t ft-rails:on-build .```
@@ -59,7 +59,7 @@ CMD ["rails", "s", "-b", “0.0.0.0”, “-p”, "3000"]
 ```print "Hello Ruby!\n"``` <br>
 ```40 + 2```
 
-## [3.](https://github.com/dfinnis/Docker/blob/master/01_dockerfiles/ex03/Dockerfile) Debian with Gitlab server (SSL and SSH)
+## [3.](https://github.com/anyaschukin/Docker/blob/master/01_dockerfiles/ex03/Dockerfile) Debian with Gitlab server (SSL and SSH)
 
 1. Build and run: <br>
 ```docker build -t ex03 .``` <br>
